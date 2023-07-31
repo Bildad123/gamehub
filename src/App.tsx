@@ -1,5 +1,6 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import Navbar from "./components/Navbar";
 
 function App() {
   // Use the useTheme hook to access theme
@@ -14,8 +15,8 @@ function App() {
   return (
     <>
       <Grid container>
-        <Grid item xs={12} sx={{ bgcolor: "coral" }}>
-          <Typography>Nav</Typography>
+        <Grid item xs={12}>
+          <Navbar />
         </Grid>
       </Grid>
       <Grid container columns={{ xs: 6, sm: 12 }}>
