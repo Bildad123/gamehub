@@ -1,10 +1,34 @@
-import { Button } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 function App() {
+  // Use the useTheme hook to access theme
+  const theme = useTheme();
+
+  // Access breakpoints from theme
+  const { breakpoints } = theme;
+
+  // Use the useMediaQuery hook to render aside on large devices
+  const matches = useMediaQuery(breakpoints.down("sm"));
+
   return (
-    <div className="App">
-      <Button variant="contained">Simple Button</Button>
-    </div>
+    <>
+      <Grid container>
+        <Grid item xs={12} sx={{ bgcolor: "coral" }}>
+          <Typography>Nav</Typography>
+        </Grid>
+      </Grid>
+      <Grid container columns={{ xs: 6, sm: 12 }}>
+        {!matches && (
+          <Grid item xs={6} sx={{ bgcolor: "gold" }}>
+            <Typography>Aside</Typography>
+          </Grid>
+        )}
+        <Grid item xs={6} sx={{ bgcolor: "dodgerblue" }}>
+          <Typography>Main</Typography>
+        </Grid>
+      </Grid>
+    </>
   );
 }
 
