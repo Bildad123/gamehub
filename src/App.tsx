@@ -3,8 +3,8 @@ import { CssBaseline, Grid, Typography, useMediaQuery } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Navbar from "./components/Navbar";
 import ColorModeProvider from "./contexts/ColorModeProvider";
+import GameGrid from "./components/GameGrid";
 
-//export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 function App() {
   // useState hook for switching between light and dark mode.
   const [mode, setMode] = useState<"light" | "dark">("dark");
@@ -45,6 +45,7 @@ function App() {
             )}
             <Grid item xs={6}>
               <Typography>Main</Typography>
+              <GameGrid />
             </Grid>
           </Grid>
         </ColorModeProvider>
