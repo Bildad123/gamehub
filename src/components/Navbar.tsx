@@ -1,15 +1,6 @@
-import {
-  Button,
-  IconButton,
-  Stack,
-  ThemeProvider,
-  Typography,
-  useTheme,
-} from "@mui/material";
-import Diversity2SharpIcon from "@mui/icons-material/Diversity2Sharp";
+import { IconButton, Stack, Typography, useTheme } from "@mui/material";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
-
 import { useContext } from "react";
 import { ColorModeContext } from "../contexts/ColorModeProvider";
 const Navbar = () => {
@@ -27,7 +18,9 @@ const Navbar = () => {
         }}
       >
         <IconButton disableRipple>
-          <Diversity2SharpIcon fontSize="large" />
+          <Typography sx={{ fontWeight: "900", fontSize: "20px" }}>
+            R A W G
+          </Typography>
         </IconButton>
 
         <IconButton onClick={toggleColorMode}>

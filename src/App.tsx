@@ -39,11 +39,11 @@ function App() {
           </Grid>
           <Grid container columns={{ xs: 6, sm: 12 }}>
             {!matches && (
-              <Grid item xs={6}>
+              <Grid item xs={2}>
                 <Typography>Aside</Typography>
               </Grid>
             )}
-            <Grid item xs={6}>
+            <Grid item xs={10}>
               <Typography>Main</Typography>
               <GameGrid />
             </Grid>
