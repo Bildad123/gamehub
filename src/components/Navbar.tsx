@@ -18,7 +18,7 @@ const Navbar = () => {
         }}
       >
         <IconButton disableRipple>
-          <Typography sx={{ fontWeight: "900", fontSize: "20px" }}>
+          <Typography sx={{ fontWeight: 900, fontSize: 20 }}>
             R A W G
           </Typography>
         </IconButton>

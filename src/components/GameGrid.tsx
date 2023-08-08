@@ -14,7 +14,7 @@ const GameGrid = () => {
         columns={{ xs: 2, md: 4, lg: 6, xl: 8 }}
       >
         {games.map((game) => (
-          <Grid item xs={2} md={2} lg={2} xl={2}>
+          <Grid key={game.id} item xs={2} md={2} lg={2} xl={2}>
             <GameCard game={game} />
           </Grid>
         ))}
