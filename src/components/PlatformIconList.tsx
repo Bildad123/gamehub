@@ -17,15 +17,15 @@ interface Props {
 }
 const PlatformIconList = ({ platforms }: Props) => {
   const iconMap: { [key: string]: JSX.Element } = {
-    pc: <FaWindows color="grey" />,
-    playStation: <FaPlaystation color="grey" />,
-    xbox: <FaXbox color="grey" />,
-    nintendo: <SiNintendo color="grey" />,
-    mac: <FaApple color="grey" />,
-    linux: <FaLinux color="grey" />,
-    android: <FaAndroid color="grey" />,
-    ios: <MdPhoneIphone color="grey" />,
-    web: <BsGlobe color="grey" />,
+    pc: <FaWindows key="pc" color="grey" />,
+    playStation: <FaPlaystation key="playstation" color="grey" />,
+    xbox: <FaXbox key="xbox" color="grey" />,
+    nintendo: <SiNintendo key="nintendo" color="grey" />,
+    mac: <FaApple key="mac" color="grey" />,
+    linux: <FaLinux key="linux" color="grey" />,
+    android: <FaAndroid key="android" color="grey" />,
+    ios: <MdPhoneIphone key="ios" color="grey" />,
+    web: <BsGlobe key="web" color="grey" />,
   };
 
   return (
