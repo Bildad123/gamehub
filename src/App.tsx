@@ -44,7 +44,6 @@ function App() {
               </Grid>
             )}
             <Grid item xs={10}>
-              <Typography>Main</Typography>
               <GameGrid />
             </Grid>
           </Grid>
