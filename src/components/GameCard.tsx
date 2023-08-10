@@ -18,7 +18,7 @@ interface Props {
 
 export const GameCard = ({ game }: Props) => {
   return (
-    <Card>
+    <Card      >
       <CardMedia component="img" height="250" image={game.background_image} />
       <CardContent>
         <Box display="flex" alignItems="center" justifyContent="space-between">

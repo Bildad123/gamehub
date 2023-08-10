@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Navbar from "./components/Navbar";
 import ColorModeProvider from "./contexts/ColorModeProvider";
 import GameGrid from "./components/GameGrid";
+import GenreList from "./components/GenreList";
 
 function App() {
   // useState hook for switching between light and dark mode.
@@ -40,7 +41,7 @@ function App() {
           <Grid container columns={{ xs: 6, sm: 12 }}>
             {!matches && (
               <Grid item xs={2}>
-                <Typography>Aside</Typography>
+                <GenreList />
               </Grid>
             )}
             <Grid item xs={10}>
