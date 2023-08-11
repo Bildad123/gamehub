@@ -7,11 +7,13 @@ import {
   Typography,
 } from "@mui/material";
 import useGenre from "../hooks/useGenre";
+import GenreListSkeleton from "./GenreListSkeleton";
 
 const GenreList = () => {
-  const { data } = useGenre();
+  const { data, isLoading } = useGenre();
   return (
     <>
+      {isLoading && <GenreListSkeleton />}
       <List>
         {data.map((genre) => (
           <ListItem key={genre.id}>
