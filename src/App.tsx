@@ -51,7 +51,7 @@ function App() {
               </Grid>
             )}
             <Grid item xs={10}>
-              <GameGrid />
+              <GameGrid selectedGenre={selectedGenre} />
             </Grid>
           </Grid>
         </ColorModeProvider>
