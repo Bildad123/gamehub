@@ -5,10 +5,13 @@ import Navbar from "./components/Navbar";
 import ColorModeProvider from "./contexts/ColorModeProvider";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
+import { Genre } from "./hooks/useGenre";
 
 function App() {
   // useState hook for switching between light and dark mode.
   const [mode, setMode] = useState<"light" | "dark">("dark");
+
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
 
   const colorMode = useMemo(
     () => ({
@@ -41,7 +44,10 @@ function App() {
           <Grid container columns={{ xs: 6, sm: 12 }}>
             {!matches && (
               <Grid item xs={2}>
-                <GenreList />
+                <GenreList
+                  selectedGenre={selectedGenre}
+                  onGenreSelect={(genre) => setSelectedGenre(genre)}
+                />
               </Grid>
             )}
             <Grid item xs={10}>

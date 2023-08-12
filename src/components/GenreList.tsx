@@ -5,11 +5,17 @@ import {
   Avatar,
   ListItemText,
   Typography,
+  ListItemButton,
 } from "@mui/material";
-import useGenre from "../hooks/useGenre";
+import useGenre, { Genre } from "../hooks/useGenre";
 import GenreListSkeleton from "./GenreListSkeleton";
 
-const GenreList = () => {
+interface Props {
+  selectedGenre: Genre | null;
+  onGenreSelect: (genre: Genre) => void;
+}
+
+const GenreList = ({ selectedGenre, onGenreSelect }: Props) => {
   const { data, isLoading } = useGenre();
   return (
     <>
@@ -20,7 +26,12 @@ const GenreList = () => {
             <ListItemAvatar>
               <Avatar src={genre.image_background} />
             </ListItemAvatar>
-            <ListItemText primary={<Typography> {genre.name} </Typography>} />
+            <ListItemButton
+              selected={genre?.id === selectedGenre?.id}
+              onClick={() => onGenreSelect(genre)}
+            >
+              {genre.name}
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
