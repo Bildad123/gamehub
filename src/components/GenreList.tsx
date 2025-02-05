@@ -6,6 +6,7 @@ import {
   ListItemText,
   Typography,
   ListItemButton,
+  Box,
 } from "@mui/material";
 import useGenre, { Genre } from "../hooks/useGenre";
 import GenreListSkeleton from "./GenreListSkeleton";
@@ -18,7 +19,7 @@ interface Props {
 const GenreList = ({ selectedGenre, onGenreSelect }: Props) => {
   const { data, isLoading } = useGenre();
   return (
-    <>
+    <Box sx={{ position: "fixed", overflow: "auto", maxHeight: "70vh", pb: 3 }}>
       {isLoading && <GenreListSkeleton />}
       <List>
         {data.map((genre) => (
@@ -35,7 +36,7 @@ const GenreList = ({ selectedGenre, onGenreSelect }: Props) => {
           </ListItem>
         ))}
       </List>
-    </>
+    </Box>
   );
 };
 
